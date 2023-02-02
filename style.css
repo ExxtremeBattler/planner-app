@@ -10,7 +10,8 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  padding:10px;
+  border: 0px;
   width: 1000px;
   position: relative;
   bottom: 25px;
@@ -49,18 +50,21 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: rgb(17, 239, 95);
+  
+  color: white;
+  background-color: yellow;
 }
 
 .present {
-  background-color: #ff6961;
-  color: rgb(86, 22, 207);
+  
+  color: white;
+  background-color: yellow;
 }
 
 .future {
-  background-color: #77dd77;
+  
   color: white;
+  background-color: yellow;
 }
 
 .saveBtn {
