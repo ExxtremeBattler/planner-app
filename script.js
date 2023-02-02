@@ -13,8 +13,11 @@ currentDay.append(getCurrentDay())
 console.log(currentHour);
 console.log(timeblockArr[0].getAttribute('id'))
 
-timeblockArr.forEach(element => {
-    var timeblockHour = element.getAttribute('id')
+for (let index = 0; index < timeblockArr.length; index++) {
+
+    var element = timeblockArr[index]
+    
+    var timeblockHour = timeblockArr[index].getAttribute('id')
 
     if (timeblockHour < currentHour) {
         element.classList.remove('present')
@@ -32,5 +35,6 @@ timeblockArr.forEach(element => {
         element.classList.remove('past')
     }
     
-});
+}
+
 })
