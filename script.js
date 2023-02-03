@@ -3,6 +3,7 @@ $(document).ready(function () {
 let currentDay = document.getElementById("currentDay")
 var currentHour = moment().hour();
 let timeblockArr = document.getElementsByClassName("timeblock")
+let saveButton = document.querySelector(".saveBtn")
 
 function getCurrentDay () {
 
@@ -37,5 +38,12 @@ for (let index = 0; index < timeblockArr.length; index++) {
     }
     
 }
+
+saveButton.addEventListener("click", function (event) {
+    const targetBtn = event.target
+    console.log(targetBtn.parentElement.id)
+    
+    
+})
 
 })
