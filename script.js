@@ -12,6 +12,7 @@ function getCurrentDay () {
 currentDay.append(getCurrentDay())
 console.log(currentHour);
 console.log(timeblockArr[0].getAttribute('id'))
+console.log(timeblockArr[0].firstElementChild)
 
 for (let index = 0; index < timeblockArr.length; index++) {
 
@@ -20,19 +21,19 @@ for (let index = 0; index < timeblockArr.length; index++) {
     var timeblockHour = timeblockArr[index].getAttribute('id')
 
     if (timeblockHour < currentHour) {
-        element.classList.remove('present')
-        element.classList.remove('future')
-        element.classList.add('past')
+        element.firstElementChild.classList.remove('present')
+        element.firstElementChild.classList.remove('future')
+        element.firstElementChild.classList.add('past')
     }
     else if (timeblockHour > currentHour) {
-        element.classList.remove('present')
-        element.classList.add('future')
-        element.classList.remove('past')
+        element.firstElementChild.classList.remove('present')
+        element.firstElementChild.classList.add('future')
+        element.firstElementChild.classList.remove('past')
     }
     else {
-        element.classList.add('present')
-        element.classList.remove('future')
-        element.classList.remove('past')
+        element.firstElementChild.classList.add('present')
+        element.firstElementChild.classList.remove('future')
+        element.firstElementChild.classList.remove('past')
     }
     
 }
