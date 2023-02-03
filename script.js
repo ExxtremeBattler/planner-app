@@ -3,7 +3,7 @@ $(document).ready(function () {
 let currentDay = document.getElementById("currentDay")
 var currentHour = moment().hour();
 let timeblockArr = document.getElementsByClassName("timeblock")
-let saveButton = document.querySelector(".saveBtn")
+let saveButtons = document.querySelectorAll(".saveBtn")
 
 function getCurrentDay () {
 
@@ -39,17 +39,23 @@ for (let index = 0; index < timeblockArr.length; index++) {
     
 }
 
-saveButton.addEventListener("click", function (event) {
-    const targetBtn = event.target
-    console.log(targetBtn.previousElementSibling.value)
+saveButtons.forEach(element => {
+
+    element.addEventListener("click", function (event) {
+        const targetBtn = event.target
+        console.log(targetBtn.previousElementSibling.value)
+        
+        let targetTime = targetBtn.parentElement.id
+        let targetText = targetBtn.previousElementSibling.value
     
-    let targetTime = targetBtn.parentElement.id
-    let targetText = targetBtn.previousElementSibling.value
-
-    localStorage.setItem(targetTime, targetText)
-
-
+        localStorage.setItem(targetTime, targetText)
     
-})
+        console.log(localStorage.getItem("9"))
+    
+    
+        
+    })
+    
+});
 
 })
