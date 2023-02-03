@@ -41,8 +41,14 @@ for (let index = 0; index < timeblockArr.length; index++) {
 
 saveButton.addEventListener("click", function (event) {
     const targetBtn = event.target
-    console.log(targetBtn.parentElement.id)
+    console.log(targetBtn.previousElementSibling.value)
     
+    let targetTime = targetBtn.parentElement.id
+    let targetText = targetBtn.previousElementSibling.value
+
+    localStorage.setItem(targetTime, targetText)
+
+
     
 })
 
