@@ -15,6 +15,18 @@ console.log(currentHour);
 console.log(timeblockArr[0].getAttribute('id'))
 console.log(timeblockArr[0].firstElementChild)
 
+
+for (let index = 0; index < timeblockArr.length; index++) {
+
+    var text = localStorage.getItem(timeblockArr[index].getAttribute('id'))
+    timeblockArr[index].firstElementChild.value = text
+
+
+    };
+
+
+
+
 for (let index = 0; index < timeblockArr.length; index++) {
 
     var element = timeblockArr[index]
